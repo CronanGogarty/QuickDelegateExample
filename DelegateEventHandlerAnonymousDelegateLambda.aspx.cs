@@ -20,7 +20,10 @@ public partial class NewFile : System.Web.UI.Page
             lblMessage.Text = "Anonymous delegate example";
         };
 
-        cmdLambdaExpression.Click += (object snd, EventArgs evntargs) =>
+        //cmdLambdaExpression.Click += (object snd, EventArgs evntargs) =>
+        /*now I am able to use Paramter Type Inference this means the compiler 
+         * can determine the type of the parameters - they are still strongly typed!!! */ 
+        cmdLambdaExpression.Click += (x, z) => 
         {
             lblMessage.Text = "Subscribed to a Lambda event handler!!!";
         }; 
