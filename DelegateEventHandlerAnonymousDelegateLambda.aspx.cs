@@ -20,6 +20,11 @@ public partial class NewFile : System.Web.UI.Page
             lblMessage.Text = "Anonymous delegate example";
         };
 
+        cmdLambdaExpression.Click += (object snd, EventArgs evntargs) =>
+        {
+            lblMessage.Text = "Subscribed to a Lambda event handler!!!";
+        }; 
+
         if (!Page.IsPostBack)
         {
             //do some stuff
